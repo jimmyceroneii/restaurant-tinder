@@ -26,3 +26,33 @@ export const indianaRestaurants = [
 	"Matt the Miller's Tavern",
 	'Grindstone Public House',
 ];
+
+export const losAngelesRestaurants = [
+	'Leos Tacos',
+	'Mardis Gras Tuesday',
+	'Better Than Sex',
+	'Formosa Cafe',
+	'Philippe The Original',
+	'El Coyote Cafe',
+	'Casablanca Restaurant',
+	'Apple Pan',
+	'Dear John\'s',
+	'Canter\'s Deli',
+	'Saikai Ramen Bar',
+	'SUGARFISH',
+	'Hotville Chicken',
+	'One More Kitchen',
+	'Koreatown Pizza Company',
+	'Gol Tong Chicken',
+	'Pa Ord Noodle',
+	'Jitlada',
+	'Eataly',
+	'Angelini Osteria',
+	'Kagaya',
+	'Forage',
+	'Salaya',
+	'Mi Ranchito Veracruz',
+	'Escala K-Town',
+	'Concerto',
+	'Silver Lake Ramen'
+]
