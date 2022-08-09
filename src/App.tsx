@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Card } from './Card/Card';
+import { Comparison } from './Components/Comparison';
+import { ResultDisplay } from './Components/ResultDisplay';
 import { indianaRestaurants } from './restaurantLists';
-import { styles } from './styles';
 
-export const App = () => {
+export const App: React.FC = () => {
   const initialList1 = indianaRestaurants.slice(
     0,
     Math.ceil(indianaRestaurants.length / 2)
@@ -21,31 +21,21 @@ export const App = () => {
   return (
     <div>
       {list1.length > 0 && list2.length > 0 ? (
-        <div style={styles.cardContainer}>
-          <Card
-            onClick={() => setList2(list2.slice(1, list2.length))}
-            item={list1[0]}
-          />
-          <Card
-            onClick={() => setList1(list1.slice(1, list1.length))}
-            item={list2[0]}
-          />
-        </div>
+        <Comparison
+          list1={list1}
+          list2={list2}
+          setList1={setList1}
+          setList2={setList2}
+        />
       ) : (
-        <div style={styles.card}>
-          <p style={styles.choiceText}>
-            You have chosen: {list1.length === 0 ? list2[0] : list1[0]}
-          </p>
-          <button
-            style={styles.choiceButton}
-            onClick={() => {
-              setList1(initialList1);
-              setList2(initialList2);
-            }}
-          >
-            Reset
-          </button>
-        </div>
+        <ResultDisplay
+          initialList1={initialList1}
+          initialList2={initialList2}
+          list1={list1}
+          list2={list2}
+          setList1={setList1}
+          setList2={setList2}
+        />
       )}
     </div>
   );
