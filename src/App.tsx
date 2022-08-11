@@ -32,7 +32,7 @@ export const App: React.FC = () => {
       ) : (
         <ResultDisplay
           randomizeList={() => {
-            setRandomizedList(randomizeList({ list: indianaRestaurants }));
+            setRandomizedList(randomizeList({ list: losAngelesRestaurants }));
             setList1(
               randomizedList.slice(
                 Math.ceil(randomizedList.length / 2),
