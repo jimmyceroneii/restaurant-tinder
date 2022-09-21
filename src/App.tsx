@@ -1,8 +1,8 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { Comparison } from './Components/Comparison';
 import { ResultDisplay } from './Components/ResultDisplay';
 import { randomizeList } from './helpers/listUtils';
-import { indianaRestaurants, losAngelesRestaurants } from './restaurantLists';
+import { losAngelesRestaurants } from './restaurantLists';
 
 export const App: React.FC = () => {
   const [randomizedList, setRandomizedList] = useState(
